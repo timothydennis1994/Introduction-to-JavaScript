@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 21;
+if (votingAge > 18) {
+  console.log(true);
+}
 
 
 /*
@@ -30,7 +33,11 @@ Do the following:
 
    HINT: no function required
 */
-
+let value1 = 5;
+let value2 = 7;
+if (value1 < value2){
+  console.log(value1 + value2)
+}
 
 
 
@@ -45,7 +52,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+const stringVariable = "1999";
+stringVariable = Number("1999");
+console.log(stringVariable);
 
 
 
@@ -58,9 +67,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    console.log(a * b)
   }
+  multiply(6, 4);
 
 
 
@@ -74,9 +84,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    console.log(age * 7);
 }
+dogYears(26);
 
 
 
@@ -107,9 +118,32 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+  
+    if (age >= 1 && weight < 6) {
+      console.log(weight * .05)
+    }
+    else if (age >= 1 && weight >= 6 && weight < 11) {
+      console.log(weight * .04)
+    }
+    else if (age >= 1 && weight >= 11 && weight < 15) {
+      console.log(weight * .03)
+    }
+    else if (age >= 1 && weight >= 15) {
+      console.log(weight * .02)
+    }
+    else if (age >= .166 && age < .34) {
+      console.log(weight * .10)
+    }
+    else if (age >= .34 && age < .59) {
+      console.log(weight * .05)
+    }
+    else if (age >= .59 && age < 1) {
+      console.log(weight * .04)
+    }
+
   }
+  hungryDog(15, 1);
 
 
 
@@ -134,9 +168,49 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
+var computer = Math.random();
+  if (computer < .34) {
+    var computer = "Rock"
+  } else if (computer >= .34 && choice <= .66) {
+    var computer = "Paper"
+  } else if (computer >.66) {
+    var computer = "Scissors"
+  }
+
+  function game(user, computer){
+    if (computer === "Rock" && user === "Rock"){
+      return "it's a tie";
+    }
+    else if (computer === "Rock" && user === "Paper"){
+      return "you win!";
+    }
+    else if (computer === "Rock" && user === "Scissors"){
+      return "you lose!";
+    }
+    else if (computer === "Paper" && user === "Paper"){
+      return "it's a tie";
+    }
+    else if (computer === "Paper" && user === "Scissors"){
+      return "you win!";
+    }
+    else if (computer === "Paper" && user === "Rock"){
+      return "you lose!";
+    }
+    else if (computer === "Scissors" && user === "Scissors"){
+      return "it's a tie";
+    }
+    else if (computer === "Scissors" && user === "Paper"){
+      return "you lose!";
+    }
+    else if (computer === "Scissors" && user === "Rock"){
+      return "you win!";
+  }
 }
+console.log(game("Rock",computer));
+console.log(game("Paper",computer));
+console.log(game("Scissors",computer));
+
+
   
   
 
@@ -151,7 +225,7 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(kilos){
     /*add your code here*/
   }
 
